@@ -1,0 +1,44 @@
+# README.md
+
+This folder contains the raw data files for the Gilmore, Thomas, and Fesi study.
+
+- **egi.csv** contains the (x,y) positions for the EGI channels used for plotting figures.
+- **moco-3-pattern-child.csv** contains the EEG data for the child participants and **moco-3-pattern-adult.csv** contains the EEG data for the adult participants.
+  - "iSess": subject identifier
+  - "Harm": Harmonic
+  - "Sr": real component of EEG
+  - "Si": imaginary component of EEG
+  - "Pattern": Flow pattern type
+  - "Speed": Flow speed (deg/s)
+  - "Channel": Channel index 1:128	
+  - "ChanGroup": Spatial grouping of channel for comparison with prior work	
+  - "Sex: subject sex	
+  - "AgeDays": subject age in days
+- **moco-3-pattern-{adult,child}-{1F1,2F1,3F1,1F2}-stats.csv** contains the full statistical results from the analyses of the children and adult data at the indicated harmonics.
+  - "Chan": Channel index 1:128
+  - "Cond": {Pattern, Speed, Pattern x Speed}
+  - "Fvals": Pillai trace statistic
+  - "FdfNum", df for numerator of F test on Pillai
+  - "FdfDen", df for denominator of F test on Pillai
+  - "Pvals", p value for F test on Pillai
+  - "xpos", x position of channel for EGI plot
+  - "ypos", y position of channel for EGI plot
+  - "Pvals_cuts", p value categorization
+  - "ges", estimate of generalized eta squared value for effect
+  - "pes", estimate of partial eta squared value for effect
+  - "T2btw", Hotelling's T2 statistic across conditions, calculated within subjects
+  - "T2btw_p", p value of T2btw
+  - "T2btw_df1", df for T2btw
+  - "T2btw_df2", df for T2btw
+  - "T2acr", T2 computed across conditions and across subjects
+  - "T2acr_p", p value of T2acr
+  - "T2acr_df1", df of T2acr
+  - "T2acr_df2", df of T2acr
+  - "T2cbtw", T2circ statistic across conditions, calculated within subjects
+  - "T2cbtw_p", p value of T2cbtw
+  - "T2cbtw_df1", df of T2cbtw
+  - "T2cbtw_df2", dv of T2cbtw
+  - "T2cacr", T2circ statistic across conditions and across subjects
+  - "T2cacr_p", p value of T2cacr
+  - "T2cacr_df1", df of T2cacr
+  - "T2cacr_df2", df of T2cacr

@@ -1,0 +1,5 @@
+manova_channel <- function(ch, df, harm, form) {
+  df <- df %>%
+    filter( Channel == ch, Harm == harm)
+  manova(formula = form, data=df)
+}
