@@ -10,7 +10,7 @@ This is the repo for the visual evoked potential study by Rick Gilmore, Amanda T
     - [Child 1F1](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/child.1F1.html)
     - [Child 2F1](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/child.2F1.html)
     - [Child 3F1](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/child.3F1.html)
-    - [Child 1F2](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/chchild.1F2.html)
+    - [Child 1F2](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/child.1F2.html)
     - [Adult 1F1](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/adult.1F1.html)
     - [Adult 2F1](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/adult.2F1.html)
     - [Adult 3F1](https://rawgit.com/gilmore-lab/gilmore-thomas-fesi-2015/master/html/adult.3F1.html)
