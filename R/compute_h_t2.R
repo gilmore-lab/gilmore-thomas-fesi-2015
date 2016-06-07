@@ -1,10 +1,10 @@
-compute_h_t2 <- function(chan, df, harm, bysubject=TRUE) {
+compute_h_t2 <- function(chan, df, harm, pattern, speed, bysubject=TRUE) {
   require(DescTools) # for HotellingsT2Test
   
   # If bysubject, then evaluate T2 on the basis of subject means
   if (bysubject) {
     df <- df %>%
-      filter(Channel == chan, Harm == harm) %>%
+      filter(Channel == chan, Harm == harm, Pattern==pattern, Speed==speed) %>%
       group_by(iSess) %>%
       summarise(mSr = mean(Sr), mSi = mean(Si)) 
     
@@ -16,7 +16,7 @@ compute_h_t2 <- function(chan, df, harm, bysubject=TRUE) {
     detach(df)
   } else { 
     df <- df %>%
-      filter(Channel == chan, Harm == harm)
+      filter(Channel == chan, Harm == harm, Pattern == pattern, Speed == speed)
     
     attach(df)
     h_stat <- HotellingsT2Test(cbind(Sr,Si), mu=c(0,0))$statistic

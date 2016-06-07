@@ -1,7 +1,7 @@
 make_stats_df <- function(maov_summ, df_egi) {
   # Extract stats and assemble into data frame
   list_stats <- data.frame(t(sapply(maov_summ, extract_stats)))
-  names( list_stats ) <- rep( c("Pattern", "Speed", "Patt_Spd"), 4)
+  names(list_stats) <- rep( c("Pattern", "Speed", "Patt_Spd"), 4)
   list_F <- list_stats[,1:3]
   list_dfNum <- list_stats[,4:6]
   list_dfDen <- list_stats[,7:9]
@@ -13,7 +13,7 @@ make_stats_df <- function(maov_summ, df_egi) {
   pvals <- data.frame(list_dfp) %>% gather(Pvals, pvals, Pattern:Patt_Spd)
   
   df_stats <- data.frame(Chan = rep( 1:128, 3), 
-                         Cond = rep(c("Pattern", "Speed", "Patt*Spd"), 
+                         Cond = rep(c("Pattern", "Speed", "Patt_Spd"), 
                                     c(128, 128, 128)),
                          Fvals = F_val[,2],
                          FdfNum = dfNum[,2],
@@ -32,6 +32,6 @@ make_stats_df <- function(maov_summ, df_egi) {
   df_stats$Pvals_cuts = Pvals_cuts
   
   # Change order of Conditions for plotting
-  df_stats$Cond = ordered( df_stats$Cond, levels=c("Pattern", "Speed", "Patt*Spd"))
+  df_stats$Cond = ordered( df_stats$Cond, levels=c("Pattern", "Speed", "Patt_Spd"))
   df_stats
 }

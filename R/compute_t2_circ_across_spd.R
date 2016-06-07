@@ -1,4 +1,4 @@
-compute_t2_circ <- function(chan, df, harm, pattern, speed, bysubject=TRUE) {
+compute_t2_circ_across_spd <- function(chan, df, harm, bysubject=TRUE) {
 # compute_t2_circ <- function(chan, df, harm, bysubject=TRUE)
   # Computes T2circ statistics from Victor & Mast 1991, assumes
   # mean value is at origin.
@@ -8,7 +8,7 @@ compute_t2_circ <- function(chan, df, harm, pattern, speed, bysubject=TRUE) {
   # If bysubject, then evaluate T2circ on the basis of subject means
   if (bysubject) {
     df <- df %>%
-      filter(Channel == chan, Harm == harm, Pattern == pattern, Speed == speed) %>%
+      filter(Channel == chan, Harm == harm) %>%
       group_by(iSess) %>%
       summarise(mSr = mean(Sr), mSi = mean(Si)) 
     
@@ -22,7 +22,7 @@ compute_t2_circ <- function(chan, df, harm, pattern, speed, bysubject=TRUE) {
     
   } else { 
     df <- df %>%
-      filter(Channel == chan, Harm == harm, Pattern == pattern, Speed == speed)
+      filter(Channel == chan, Harm == harm)
     
     attach(df)
     t2_circ_stats <- t2_circ(cbind(Sr,Si), c(0,0))
