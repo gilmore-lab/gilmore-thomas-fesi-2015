@@ -28,6 +28,7 @@ library(ggplot2)
 library(dplyr)
 library(png)
 library(gridExtra)
+library(grid)
 
 # knitr parameters
 knitr::opts_chunk$set(dpi=params$dpi, dev=params$plot_dev, fig.path=figs_path)
